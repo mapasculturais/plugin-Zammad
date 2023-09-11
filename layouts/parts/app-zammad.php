@@ -4,6 +4,7 @@
 <script>
     $(function() {
         new ZammadChat({
+            title: 'Duvidas? Fale conosco',
             background: <?=json_encode($background)?>,
             fontSize: '12px',
             chatId: 1

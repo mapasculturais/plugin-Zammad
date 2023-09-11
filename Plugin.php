@@ -10,6 +10,7 @@ class Plugin extends \MapasCulturais\Plugin
     public function __construct(array $config = array())
     {
         $config += [
+            'title' => env('ZAMMAD_TITLE','Duvidas? fale conosco'),
             'enabled' => env('ZAMMAD_ENABLED',false),
             'url' => env('ZAMMAD_URL', null),
             'background' => env('ZAMMAD_BACKGROUD_COLLOR','#121212'),
