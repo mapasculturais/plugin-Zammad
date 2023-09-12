@@ -25,9 +25,12 @@ class Plugin extends \MapasCulturais\Plugin
         $self = $this;
 
         $app->hook('mapasculturais.body:after', function() use ($app, $self){
-            if($self->config['enabled']){
-                $app->view->part('app-zammad', $self->config);
+            if(!$app->view->controller instanceof \BaseV1EmbedTools\Controller){
+                if($self->config['enabled']){
+                    $app->view->part('app-zammad', $self->config);
+                }
             }
+           
         });
     }
 
